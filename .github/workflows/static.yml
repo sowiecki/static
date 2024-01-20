@@ -53,6 +53,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          personal_token: ${{ secrets.STATIC }}
           publish_dir: ./out
           external_repository: sowiecki/sowiecki.github.io
