@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>New Remix App</title><meta name="description" content="Welcome to Remix!"/></head><body><div style="font-family:system-ui, sans-serif;line-height:1.8"><h1>Welcome to Remix</h1><ul><li><a target="_blank" href="https://remix.run/tutorials/blog" rel="noreferrer">15m Quickstart Blog Tutorial</a></li><li><a target="_blank" href="https://remix.run/tutorials/jokes" rel="noreferrer">Deep Dive Jokes App Tutorial</a></li><li><a target="_blank" href="https://remix.run/docs" rel="noreferrer">Remix Docs</a></li></ul></div><script>((STORAGE_KEY, restoreKey) => {
+    if (!window.history.state || !window.history.state.key) {
+      let key = Math.random().toString(32).slice(2);
+      window.history.replaceState({
+        key
+      }, "");
+    }
+    try {
+      let positions = JSON.parse(sessionStorage.getItem(STORAGE_KEY) || "{}");
+      let storedY = positions[restoreKey || window.history.state.key];
+      if (typeof storedY === "number") {
+        window.scrollTo(0, storedY);
+      }
+    } catch (error) {
+      console.error(error);
+      sessionStorage.removeItem(STORAGE_KEY);
+    }
+  })("positions", null)</script><link rel="modulepreload" href="/build/manifest-534ACD41.js"/><link rel="modulepreload" href="/build/entry.client-TMUTOSL7.js"/><link rel="modulepreload" href="/build/_shared/chunk-XOZW6UYP.js"/><link rel="modulepreload" href="/build/_shared/chunk-DWFMXSZ6.js"/><link rel="modulepreload" href="/build/root-FHCVYUIY.js"/><link rel="modulepreload" href="/build/routes/_index-3TRAYUFK.js"/><script>window.__remixContext = {"url":"/","state":{"loaderData":{"root":null,"routes/_index":null},"actionData":null,"errors":null},"future":{"v3_fetcherPersist":false,"v3_relativeSplatPath":false}};</script><script type="module" async="">import "/build/manifest-534ACD41.js";
+import * as route0 from "/build/root-FHCVYUIY.js";
+import * as route1 from "/build/routes/_index-3TRAYUFK.js";
+window.__remixRouteModules = {"root":route0,"routes/_index":route1};
+
+import("/build/entry.client-TMUTOSL7.js");</script></body></html>
